@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Produits.master.cs" Inherits="E_Commerce.Produits" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .auto-style1 {
+            height: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width:1100px; margin:0 auto;">
+                <tr style="width:1100px; border-color:aqua; background-color:white">
+                    <td class="auto-style1">
+                        <asp:Image ID="Image1" runat="server" /> Logo</td>
+                    <td class="auto-style1">titel</td>
+                    <td class="auto-style1">Social</td>
+                </tr>
+                <tr style="">
+                    <td colspan="3">
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#6A5ACD" Font-Bold="True" Font-Size="Large" ForeColor="White" Height="40px" HorizontalPad="54px" Width="">
+                            <Items>
+                                <asp:MenuItem Text="Maison" Value="Maison"></asp:MenuItem>
+                                <asp:MenuItem Text="Produits" Value="Produits"></asp:MenuItem>
+                                <asp:MenuItem Text="Enregistrement" Value="Enregistrement"></asp:MenuItem>
+                                <asp:MenuItem Text="Connexion" Value="Connexion"></asp:MenuItem>
+                                <asp:MenuItem Text="About " Value="About "></asp:MenuItem>
+                                <asp:MenuItem Text="Contatct" Value="Contatct"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#00008B" BorderColor="#00008B" BorderStyle="Outset" ForeColor="White" Height="40px" />
+                            <StaticMenuItemStyle Font-Bold="true" Font-Size="Large" ForeColor="White" HorizontalPadding="59px" />
+                            <StaticSelectedStyle BackColor="Red" BorderColor="Green" BorderStyle="Inset" ForeColor="#666666" Height="40px" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr >
+                    <td colspan="3">
+                        <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>
+                                <asp:Image ID="Image2" runat="server" Height="270px" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>--%>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr style="width:1150px; height:25px; background-color:black; text-align:center; color:white">
+                    <td colspan="3">
+                        <p>&copy; <%: DateTime.Now.Year %> - Sou9</p>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
